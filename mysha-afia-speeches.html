@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mysha Afia's Motivational Speeches</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #EAF4FC;
+  --bg-deep: #D7EAF8;
+  --surface: #F8FBFE;
+  --ink: #0F2A45;
+  --muted: #4B6883;
+  --accent: #2C7CC0;
+  --accent-soft: #BCDBF2;
+  --line: #C4DCEF;
+  --glow: rgba(120, 180, 232, .35);
+  --m1: #D3E7F8; --m2: #A8CCEA; --m3: #6EA6D8; --path: #FFFFFF;
+  --display: 'Cormorant Garamond', 'Tiro Bangla', Georgia, serif;
+  --script: 'Great Vibes', 'Cormorant Garamond', cursive;
+  --bangla-serif: 'Tiro Bangla', 'Noto Serif Bengali', Georgia, serif;
+  --body: 'Hind Siliguri', 'Noto Sans Bengali', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1A2B;
+    --bg-deep: #12283F;
+    --surface: #102339;
+    --ink: #E7F2FC;
+    --muted: #9BB7CF;
+    --accent: #6DB3EB;
+    --accent-soft: #1F3C59;
+    --line: #22425F;
+    --glow: rgba(80, 150, 220, .25);
+    --m1: #16304B; --m2: #1E4166; --m3: #2B5A8A; --path: #BFE0FA;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1A2B;
+  --bg-deep: #12283F;
+  --surface: #102339;
+  --ink: #E7F2FC;
+  --muted: #9BB7CF;
+  --accent: #6DB3EB;
+  --accent-soft: #1F3C59;
+  --line: #22425F;
+  --glow: rgba(80, 150, 220, .25);
+  --m1: #16304B; --m2: #1E4166; --m3: #2B5A8A; --path: #BFE0FA;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 20;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  border-bottom: 1px solid var(--line);
+}
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { font-family: var(--script); font-size: 1.7rem; text-decoration: none; color: var(--accent); line-height: 1; }
+.nav ul { display: flex; gap: 1.6rem; list-style: none; }
+.nav ul a { text-decoration: none; font-size: .98rem; color: var(--muted); transition: color .2s; }
+.nav ul a:hover { color: var(--ink); }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 12vw, 9rem) 0 clamp(4rem, 10vw, 7rem);
+  background:
+    radial-gradient(60% 70% at 85% 10%, var(--glow), transparent 70%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+}
+.scene {
+  position: absolute; right: 0; bottom: 0;
+  width: min(940px, 100%);
+  pointer-events: none;
+}
+.scene svg { display: block; width: 100%; height: auto; }
+.scene .m1 { fill: var(--m1); }
+.scene .m2 { fill: var(--m2); }
+.scene .m3 { fill: var(--m3); }
+.scene .trail { fill: none; stroke: var(--path); stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: climb 2.6s .9s ease-out forwards; }
+.scene .flag { transform-origin: 560px 100px; opacity: 0; animation: plant .7s 3.3s cubic-bezier(.2,.9,.3,1.3) forwards; }
+.scene .pole { stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; }
+.scene .cloth { fill: var(--accent); }
+.scene .bird { fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; opacity: .45; }
+@keyframes climb { to { stroke-dashoffset: 0; } }
+@keyframes plant { from { opacity: 0; transform: scaleY(.2); } to { opacity: 1; transform: none; } }
+@media (max-width: 720px) { .scene { opacity: .8; width: 130%; right: -15%; } .hero { padding-bottom: 12rem; } }
+.hero .wrap { position: relative; z-index: 1; }
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(2.7rem, 9.5vw, 6.6rem);
+  line-height: .98;
+  letter-spacing: -.01em;
+  color: var(--ink);
+}
+.hero h1 span { display: block; }
+.hero .role {
+  font-family: var(--script);
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  color: var(--accent);
+  margin-top: 1.4rem;
+  line-height: 1.2;
+}
+.hero .tagline {
+  font-family: var(--bangla-serif);
+  font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+  color: var(--muted);
+  max-width: 30ch;
+  margin-top: 1.6rem;
+  line-height: 1.7;
+}
+.btn {
+  display: inline-block;
+  margin-top: 2.2rem;
+  padding: .85rem 2rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 10px 30px -12px var(--ink);
+}
+.btn:hover { transform: translateY(-2px); }
+
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.hero h1 span, .hero .role, .hero .tagline, .hero .btn { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+.hero h1 span:nth-child(2) { animation-delay: .12s; }
+.hero .role { animation-delay: .3s; }
+.hero .tagline { animation-delay: .45s; }
+.hero .btn { animation-delay: .55s; }
+
+/* ---------- Section heads ---------- */
+section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+.sec-head h2 {
+  font-family: var(--bangla-serif);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  line-height: 1.3;
+}
+.sec-head p { color: var(--muted); margin-top: .5rem; max-width: 46ch; }
+
+/* ---------- Speeches ---------- */
+.tools { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin: 2rem 0 1.2rem; }
+.search {
+  flex: 1 1 240px;
+  padding: .8rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+}
+.search::placeholder { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  padding: .4rem 1.05rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: .95rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+.chip:hover { border-color: var(--accent); color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.list { border-top: 1px solid var(--line); }
+.row {
+  display: grid;
+  grid-template-columns: 170px 1fr 28px;
+  gap: 1.5rem;
+  align-items: start;
+  width: 100%;
+  text-align: left;
+  padding: 1.7rem .6rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: background .25s, padding .25s;
+}
+.row:hover { background: var(--surface); padding-inline: 1.2rem; }
+.row .meta { color: var(--muted); font-size: .92rem; line-height: 1.6; padding-top: .35rem; }
+.row .meta b { display: block; color: var(--accent); font-weight: 500; font-size: 1rem; }
+.row h3 { font-family: var(--bangla-serif); font-weight: 400; font-size: clamp(1.3rem, 3vw, 1.75rem); line-height: 1.4; }
+.row p { color: var(--muted); margin-top: .35rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.row svg { width: 22px; height: 22px; margin-top: .5rem; color: var(--accent); transition: transform .25s; }
+.row:hover svg { transform: translateX(4px); }
+.empty { padding: 3rem 0; color: var(--muted); text-align: center; }
+
+@media (max-width: 640px) {
+  .row { grid-template-columns: 1fr 24px; gap: .5rem 1rem; }
+  .row .meta { grid-column: 1 / -1; padding-top: 0; }
+  .row .meta b { display: inline; margin-right: .6rem; }
+  .nav ul { gap: 1rem; }
+}
+
+/* ---------- Quote band ---------- */
+.quote {
+  background: linear-gradient(135deg, var(--bg-deep), var(--accent-soft));
+  text-align: center;
+}
+.quote blockquote {
+  font-family: var(--bangla-serif);
+  font-size: clamp(1.6rem, 4.2vw, 2.7rem);
+  line-height: 1.55;
+  max-width: 24ch;
+  margin-inline: auto;
+}
+.quote cite { display: block; margin-top: 1.4rem; font-family: var(--script); font-style: normal; font-size: 1.9rem; color: var(--accent); }
+
+/* ---------- About ---------- */
+.about .wrap { display: grid; grid-template-columns: 240px 1fr; gap: clamp(2rem, 6vw, 4.5rem); align-items: center; }
+.mono {
+  width: 240px; aspect-ratio: 1; border-radius: 50%;
+  display: grid; place-items: center;
+  background: radial-gradient(circle at 35% 30%, #fff, var(--accent-soft) 70%);
+  border: 1px solid var(--line);
+  box-shadow: 0 0 0 14px color-mix(in srgb, var(--accent-soft) 45%, transparent), 0 0 0 15px var(--line);
+  font-family: var(--script);
+  font-size: 8rem;
+  color: var(--accent);
+  line-height: 1;
+  overflow: hidden;
+}
+.mono img { width: 100%; height: 100%; object-fit: cover; }
+.about p { color: var(--muted); font-size: 1.12rem; max-width: 52ch; margin-top: 1rem; }
+@media (max-width: 720px) {
+  .about .wrap { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .mono { width: 180px; font-size: 6rem; }
+}
+
+/* ---------- Contact ---------- */
+.contact { text-align: center; }
+.contact .sec-head p { margin-inline: auto; }
+.links { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; margin-top: 2rem; }
+.links a {
+  padding: .7rem 1.6rem; border-radius: 999px;
+  border: 1px solid var(--accent); color: var(--accent);
+  text-decoration: none; font-weight: 500; transition: all .2s;
+}
+.links a:hover { background: var(--accent); color: #fff; }
+
+footer { border-top: 1px solid var(--line); padding: 2rem 0; text-align: center; color: var(--muted); font-size: .92rem; }
+footer .s { font-family: var(--script); font-size: 1.5rem; color: var(--accent); }
+
+/* ---------- Reader ---------- */
+dialog {
+  width: min(760px, 100% - 1.5rem);
+  max-height: 90vh;
+  margin: auto;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 0;
+  overflow: hidden;
+}
+dialog::backdrop { background: rgba(10, 30, 52, .55); backdrop-filter: blur(6px); }
+.reader { max-height: 90vh; overflow-y: auto; padding: clamp(1.6rem, 5vw, 3rem); }
+.reader .close {
+  position: sticky; top: 0; float: right;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+  font-size: 1.3rem; cursor: pointer; line-height: 1;
+}
+.reader .close:hover { border-color: var(--accent); color: var(--accent); }
+.reader .tag { color: var(--accent); font-weight: 500; }
+.reader h2 { font-family: var(--bangla-serif); font-weight: 400; font-size: clamp(1.7rem, 4.5vw, 2.4rem); line-height: 1.4; margin: .4rem 0 .4rem; }
+.reader .sub { color: var(--muted); font-size: .95rem; padding-bottom: 1.4rem; margin-bottom: 1.6rem; border-bottom: 1px solid var(--line); }
+.reader .body p { font-family: var(--bangla-serif); font-size: 1.18rem; line-height: 2; margin-bottom: 1.3rem; }
+.reader .video { display: inline-block; margin-top: .6rem; padding: .65rem 1.5rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 500; }
+
+
+/* ---------- extras ---------- */
+.nav .wrap { gap: 1rem; }
+.nav nav { margin-left: auto; }
+.nav-wa { padding: .4rem 1.1rem; border-radius: 999px; background: var(--ink); color: var(--bg); text-decoration: none; font-size: .92rem; font-weight: 500; }
+.nav-wa[hidden], .float-wa[hidden] { display: none; }
+@media (max-width: 560px) { .nav-wa { display: none; } }
+.float-wa {
+  position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 15;
+  width: 56px; height: 56px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: #25A85A; color: #fff;
+  box-shadow: 0 12px 28px -8px rgba(37, 168, 90, .7);
+  transition: transform .2s;
+}
+.float-wa:hover { transform: scale(1.08); }
+.float-wa svg { width: 30px; height: 30px; }
+.wa-big {
+  display: inline-flex; align-items: center; gap: 1rem;
+  padding: 1rem 2.2rem 1rem 1.6rem; border-radius: 22px;
+  background: var(--ink); color: var(--bg) !important;
+  border: none !important; text-align: left;
+  box-shadow: 0 18px 40px -16px var(--ink);
+}
+.wa-big:hover { background: var(--ink) !important; transform: translateY(-3px); }
+.wa-big svg { width: 38px; height: 38px; color: #4ADE80; flex: none; }
+.wa-big small { display: block; font-size: .85rem; opacity: .75; line-height: 1.3; }
+.wa-big strong { font-size: 1.5rem; font-weight: 600; letter-spacing: .02em; line-height: 1.3; }
+.links a { transition: all .2s; }
+
+.row { position: relative; }
+.row::before { content: ""; position: absolute; left: 0; top: 18%; bottom: 18%; width: 3px; border-radius: 3px; background: var(--accent); transform: scaleY(0); transition: transform .25s; }
+.row:hover::before { transform: scaleY(1); }
+.sec-head h2::after { content: ""; display: block; width: 54px; height: 3px; border-radius: 3px; background: var(--accent); margin-top: .7rem; }
+.contact .sec-head h2::after { margin-inline: auto; }
+.about .sec-head h2::after { margin-inline: 0; }
+@media (max-width: 720px) { .about .sec-head h2::after { margin-inline: auto; } }
+.quote { position: relative; overflow: hidden; }
+.quote::before { content: "“"; position: absolute; top: -2rem; left: 50%; transform: translateX(-50%); font-family: var(--display); font-size: 22rem; line-height: 1; color: var(--surface); opacity: .55; pointer-events: none; }
+.quote .wrap { position: relative; }
+.quote { padding-block: 1rem; }
+.hero { border-bottom: 1px solid var(--line); }
+
+@media (prefers-reduced-motion: reduce) {
+  .scene .trail { stroke-dashoffset: 0; }
+  .scene .flag { opacity: 1; }
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Mysha Afia</a>
+    <nav>
+      <ul>
+        <li><a href="#speeches">বক্তৃতা</a></li>
+        <li><a href="#about">পরিচিতি</a></li>
+        <li><a href="#contact">যোগাযোগ</a></li>
+      </ul>
+    </nav>
+    <a class="nav-wa" id="navWa" target="_blank" rel="noopener" hidden>হোয়াটসঅ্যাপ</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="scene" aria-hidden="true">
+      <svg viewBox="0 0 800 460" preserveAspectRatio="xMaxYMax meet">
+        <path class="m1" d="M0 460V310L110 230L200 300L300 210L400 300L500 240L600 310L700 220L800 290V460Z"/>
+        <path class="m2" d="M120 460L330 230L420 290L560 100L700 250L780 330L800 340V460Z"/>
+        <path class="trail" pathLength="1" d="M300 430C360 400 330 340 400 320S470 290 500 230S540 170 560 104"/>
+        <g class="flag"><line class="pole" x1="560" y1="100" x2="560" y2="56"/><path class="cloth" d="M560 56L598 69L560 82Z"/></g>
+        <path class="m3" d="M0 460V400L140 330L260 400L400 350L540 420L680 370L800 410V460Z"/>
+        <path class="bird" d="M170 120q8-9 16 0q8-9 16 0"/>
+        <path class="bird" d="M235 84q6-7 12 0q6-7 12 0"/>
+        <path class="bird" d="M300 128q5-6 10 0q5-6 10 0"/>
+      </svg>
+    </div>
+    <div class="wrap">
+      <h1><span>Mysha Afia’s</span><span>Motivational Speeches</span></h1>
+      <div class="role">Motivational Speaker Mysha Afia Mim</div>
+      <p class="tagline" id="tagline"></p>
+      <a class="btn" href="#speeches">বক্তৃতা পড়ুন</a>
+    </div>
+  </div>
+
+  <section id="speeches">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>বক্তৃতা সমূহ</h2>
+        <p>যে কোনো বক্তৃতায় ক্লিক করে পুরোটা পড়ুন।</p>
+      </div>
+      <div class="tools">
+        <input class="search" id="search" type="search" placeholder="বক্তৃতা খুঁজুন…" aria-label="বক্তৃতা খুঁজুন">
+        <div class="chips" id="chips"></div>
+      </div>
+      <div class="list" id="list"></div>
+    </div>
+  </section>
+
+  <div class="quote" id="quoteBand" hidden>
+    <section>
+      <div class="wrap">
+        <blockquote id="quoteText"></blockquote>
+        <cite>Mysha Afia Mim</cite>
+      </div>
+    </section>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="mono" id="mono" aria-hidden="true">M</div>
+      <div class="sec-head">
+        <h2>পরিচিতি</h2>
+        <p id="aboutText"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>যোগাযোগ</h2>
+        <p id="contactNote">অনুষ্ঠানে বক্তৃতার জন্য বা যেকোনো কথা বলতে হোয়াটসঅ্যাপে মেসেজ করুন।</p>
+      </div>
+      <div class="links" id="links"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="s">Mysha Afia Mim</div>
+    <div>© <span id="year"></span> Mysha Afia’s Motivational Speeches</div>
+  </div>
+</footer>
+
+<a class="float-wa" id="floatWa" target="_blank" rel="noopener" aria-label="হোয়াটসঅ্যাপে মেসেজ করুন" hidden></a>
+
+<dialog id="reader" aria-labelledby="rTitle">
+  <div class="reader">
+    <button class="close" id="close" aria-label="বন্ধ করুন">×</button>
+    <div class="tag" id="rTag"></div>
+    <h2 id="rTitle"></h2>
+    <div class="sub" id="rSub"></div>
+    <div class="body" id="rBody"></div>
+    <a class="video" id="rVideo" target="_blank" rel="noopener" hidden>ভিডিও দেখুন</a>
+  </div>
+</dialog>
+
+<script>
+/* =====================================================================
+   ★ এই অংশটুকু আপনার নিজের তথ্য দিয়ে বদলান ★
+   ===================================================================== */
+
+const SITE = {
+  tagline: "আপনার ভেতরের আলো জেগে উঠুক, প্রতিটি শব্দে।",
+  quote: "হার মানা মানে শেষ নয়, নতুন করে শুরু করার সাহস।",
+  about: "আমি মাইশা আফিয়া মিম। আমার বক্তৃতার একটাই উদ্দেশ্য — আপনার মনে সাহস, আত্মবিশ্বাস আর এগিয়ে যাওয়ার শক্তি জাগানো।",
+  photo: "",
+  contact: {
+    whatsapp: "01620623494",
+    email: "",        // যেমন: "mysha@example.com"
+    facebook: "",     // যেমন: "https://facebook.com/..."
+    youtube: "",      // যেমন: "https://youtube.com/..."
+    instagram: ""     // যেমন: "https://instagram.com/..."
+  }
+};
+
+/* ---------------------------------------------------------------------
+   বক্তৃতার তালিকা — নতুন বক্তৃতা যোগ করতে নিচের যেকোনো একটি { ... } ব্লক
+   কপি করে , (কমা) দিয়ে নতুন ব্লক বানান।
+
+   title    = বক্তৃতার শিরোনাম
+   category = বিভাগ (একই নাম দিলে ফিল্টার বাটন নিজে থেকে তৈরি হবে)
+   date     = তারিখ
+   video    = ভিডিও লিঙ্ক (না থাকলে "" রাখুন)
+   text     = পুরো বক্তৃতা। প্যারাগ্রাফ আলাদা করতে মাঝে একটি ফাঁকা লাইন দিন।
+   নিচের ৩টি বক্তৃতা শুধু নমুনা — মুছে নিজের বক্তৃতা বসান।
+   --------------------------------------------------------------------- */
+const SPEECHES = [
+  {
+    title: "হার না মানার গল্প",
+    category: "সাহস",
+    date: "১৫ সেপ্টেম্বর ২০২৬",
+    video: "",
+    text: `প্রতিটি সফল মানুষের পেছনে থাকে অসংখ্য ব্যর্থতার গল্প। পার্থক্য শুধু একটাই — তারা থেমে যায়নি।
+
+আজ যদি আপনি ক্লান্ত হয়ে থাকেন, তাহলে জেনে রাখুন ক্লান্তি মানে আপনি চেষ্টা করছেন। আর যে চেষ্টা করছে, সে ইতিমধ্যেই অনেকের চেয়ে এগিয়ে।
+
+পথ যত কঠিনই হোক, একটা ছোট পদক্ষেপ নিন। কারণ পাহাড়ও একদিনে পার হয় না, পার হয় এক পা এক পা করে।`
+  },
+  {
+    title: "প্রতিদিন এক ধাপ",
+    category: "অভ্যাস",
+    date: "৮ সেপ্টেম্বর ২০২৬",
+    video: "",
+    text: `বড় স্বপ্ন দেখতে সাহস লাগে, কিন্তু সেই স্বপ্ন পূরণ করতে লাগে ধারাবাহিকতা।
+
+আজ আপনি যা করছেন, সেটা হয়তো ছোট মনে হচ্ছে। কিন্তু প্রতিদিনের ছোট কাজগুলোই একদিন আপনার পরিচয় হয়ে দাঁড়াবে।
+
+তাই নিজেকে বলুন — আজ আমি গতকালের চেয়ে একটু ভালো হব। ব্যস, এটুকুই যথেষ্ট।`
+  },
+  {
+    title: "নিজেকে বিশ্বাস করুন",
+    category: "আত্মবিশ্বাস",
+    date: "১ সেপ্টেম্বর ২০২৬",
+    video: "",
+    text: `পৃথিবী আপনাকে বিশ্বাস করবে, যখন আপনি নিজেকে বিশ্বাস করতে শিখবেন।
+
+অন্যের কথায় নিজের মূল্য মাপবেন না। আপনার ভেতরে এমন কিছু আছে, যা শুধু আপনিই জানেন, আর সেটাই আপনার সবচেয়ে বড় শক্তি।
+
+আয়নার সামনে দাঁড়িয়ে একবার বলুন — আমি পারব। কারণ আপনি সত্যিই পারবেন।`
+  }
+];
+
+/* =====================================================================
+   এর নিচের অংশ বদলানোর দরকার নেই
+   ===================================================================== */
+
+const bn = n => String(n).replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d]);
+const $ = id => document.getElementById(id);
+const paras = t => t.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean);
+const readMins = t => bn(Math.max(1, Math.round(t.split(/\s+/).length / 120)));
+
+let activeCat = "সব";
+let query = "";
+
+$("tagline").textContent = SITE.tagline;
+$("aboutText").textContent = SITE.about;
+$("year").textContent = bn(new Date().getFullYear());
+
+if (SITE.quote) { $("quoteText").textContent = "“" + SITE.quote + "”"; $("quoteBand").hidden = false; }
+if (SITE.photo) { const im = new Image(); im.src = SITE.photo; im.alt = "Mysha Afia Mim"; $("mono").textContent = ""; $("mono").appendChild(im); }
+
+/* contact links */
+const WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>';
+(function () {
+  const c = SITE.contact, box = $("links");
+  const waHref = c.whatsapp ? "https://wa.me/88" + c.whatsapp.replace(/\D/g, "") : "";
+  if (waHref) {
+    const big = document.createElement("a");
+    big.className = "wa-big"; big.href = waHref; big.target = "_blank"; big.rel = "noopener";
+    big.innerHTML = WA_ICON + '<span><small>হোয়াটসঅ্যাপ</small><strong></strong></span>';
+    big.querySelector("strong").textContent = c.whatsapp;
+    box.appendChild(big);
+    ["navWa", "floatWa"].forEach(id => { const el = $(id); el.href = waHref; el.hidden = false; });
+    $("floatWa").innerHTML = WA_ICON;
+  }
+  const items = [
+    [c.email && "mailto:" + c.email, "ইমেইল"],
+    [c.facebook, "ফেসবুক"],
+    [c.youtube, "ইউটিউব"],
+    [c.instagram, "ইনস্টাগ্রাম"]
+  ].filter(x => x[0]);
+  items.forEach(([href, label]) => {
+    const a = document.createElement("a");
+    a.href = href; a.textContent = label; a.target = "_blank"; a.rel = "noopener";
+    box.appendChild(a);
+  });
+  if (!waHref && !items.length) $("contactNote").textContent = "যোগাযোগের মাধ্যম শীঘ্রই যুক্ত হবে।";
+})();
+
+/* category chips */
+function buildChips() {
+  const cats = ["সব", ...new Set(SPEECHES.map(s => s.category).filter(Boolean))];
+  const box = $("chips");
+  box.textContent = "";
+  if (cats.length < 3) { box.hidden = true; return; }
+  cats.forEach(c => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.textContent = c;
+    b.setAttribute("aria-pressed", c === activeCat);
+    b.onclick = () => { activeCat = c; buildChips(); render(); };
+    box.appendChild(b);
+  });
+}
+
+/* list */
+const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+function render() {
+  const list = $("list");
+  list.textContent = "";
+  const q = query.trim().toLowerCase();
+  const shown = SPEECHES.map((s, i) => ({ s, i })).filter(({ s }) =>
+    (activeCat === "সব" || s.category === activeCat) &&
+    (!q || (s.title + " " + s.text).toLowerCase().includes(q))
+  );
+  if (!shown.length) {
+    const d = document.createElement("div");
+    d.className = "empty";
+    d.textContent = SPEECHES.length ? "কোনো বক্তৃতা পাওয়া যায়নি। অন্য শব্দে খুঁজে দেখুন।" : "বক্তৃতা শীঘ্রই যুক্ত হবে।";
+    list.appendChild(d);
+    return;
+  }
+  shown.forEach(({ s, i }) => {
+    const row = document.createElement("button");
+    row.className = "row"; row.type = "button";
+    const meta = document.createElement("div"); meta.className = "meta";
+    const b = document.createElement("b"); b.textContent = s.category || "";
+    meta.append(b, document.createTextNode(s.date || ""));
+    const mid = document.createElement("div");
+    const h = document.createElement("h3"); h.textContent = s.title;
+    const p = document.createElement("p"); p.textContent = paras(s.text)[0] || "";
+    mid.append(h, p);
+    const ic = document.createElement("span"); ic.innerHTML = ARROW;
+    row.append(meta, mid, ic);
+    row.onclick = () => openReader(i);
+    list.appendChild(row);
+  });
+}
+
+/* reader */
+const dlg = $("reader");
+function openReader(i) {
+  const s = SPEECHES[i];
+  $("rTag").textContent = s.category || "";
+  $("rTitle").textContent = s.title;
+  $("rSub").textContent = [s.date, "প্রায় " + readMins(s.text) + " মিনিটের পাঠ"].filter(Boolean).join("  |  ");
+  const body = $("rBody"); body.textContent = "";
+  paras(s.text).forEach(t => { const p = document.createElement("p"); p.textContent = t; body.appendChild(p); });
+  const v = $("rVideo");
+  if (s.video) { v.href = s.video; v.hidden = false; } else { v.hidden = true; }
+  dlg.showModal();
+  dlg.querySelector(".reader").scrollTop = 0;
+}
+$("close").onclick = () => dlg.close();
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+$("search").addEventListener("input", e => { query = e.target.value; render(); });
+
+buildChips();
+render();
+</script>
+</body>
+</html>
